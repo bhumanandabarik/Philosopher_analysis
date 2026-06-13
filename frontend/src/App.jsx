@@ -23,7 +23,8 @@ function App() {
       setResponse(null);
 
       const res = await axios.post(
-        `http://localhost:5000/api/${mode}`,
+        //`http://localhost:5000/api/${mode}`,
+        `${import.meta.env.VITE_API_URL}/api/${mode}`,
         { problem }
       );
 
